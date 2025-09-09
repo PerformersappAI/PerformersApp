@@ -1,0 +1,223 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    
+    /* Custom burgundy profile background */
+    --profile-burgundy: 8 50% 25%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    /* Teleprompter background colors */
+    --teleprompter-black: 0 0% 0%;
+    --teleprompter-white: 0 0% 100%;
+    --teleprompter-green: 120 100% 10%;
+    --teleprompter-blue: 240 100% 10%;
+
+    /* Teleprompter text colors with proper contrast */
+    --teleprompter-text-black: 0 0% 10%;
+    --teleprompter-text-white: 0 0% 95%;
+    --teleprompter-text-yellow: 60 100% 85%;
+    --teleprompter-text-red: 0 100% 75%;
+    --teleprompter-text-green: 120 100% 75%;
+    --teleprompter-text-blue: 240 100% 75%;
+
+    /* Character highlighting colors */
+    --character-highlight-subtle: 60 100% 95%;
+    --character-highlight-medium: 60 100% 88%;
+    --character-highlight-strong: 60 100% 75%;
+
+    /* Current line highlighting */
+    --current-line-bg: 210 100% 95%;
+    --current-line-border: 210 100% 70%;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Headline stroke color (black) */
+    --headline-stroke: 0 0% 0%;
+
+    /* Brand yellow */
+    --brand-yellow: 45 97% 55%;
+    --brand-yellow-foreground: 0 0% 100%;
+
+    /* Brand orange */
+    --brand-orange: 30 96% 52%;
+    --brand-orange-foreground: 0 0% 100%;
+
+    /* Hero specific tokens */
+    --hero-button-bg: 2 60% 26%;       /* #6B1D1B */
+    --hero-button-bg-hover: 2 65% 30%; /* slightly lighter on hover */
+    --hero-button-fg: 182 100% 40%;    /* #00C5CC */
+    --hero-headline: 356 78% 56%;      /* #E63946 */
+    /* Help tooltip tokens */
+    --help-bg: 0 0% 100%;
+    --help-fg: 0 0% 0%;
+    
+    /* Marketing page text colors */
+    --marketing-text-dark: 0 0% 20%;
+    --marketing-cta-bg: 30 80% 30%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    
+    /* Custom burgundy profile background for dark mode */
+    --profile-burgundy: 8 45% 20%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+
+    /* Teleprompter background colors for dark mode */
+    --teleprompter-black: 0 0% 0%;
+    --teleprompter-white: 0 0% 100%;
+    --teleprompter-green: 120 100% 10%;
+    --teleprompter-blue: 240 100% 10%;
+
+    /* Teleprompter text colors for dark mode with proper contrast */
+    --teleprompter-text-black: 0 0% 10%;
+    --teleprompter-text-white: 0 0% 95%;
+    --teleprompter-text-yellow: 60 100% 85%;
+    --teleprompter-text-red: 0 100% 75%;
+    --teleprompter-text-green: 120 100% 75%;
+    --teleprompter-text-blue: 240 100% 75%;
+
+    /* Character highlighting colors for dark mode */
+    --character-highlight-subtle: 60 30% 15%;
+    --character-highlight-medium: 60 50% 20%;
+    --character-highlight-strong: 60 70% 25%;
+
+    /* Current line highlighting for dark mode */
+    --current-line-bg: 210 50% 15%;
+    --current-line-border: 210 70% 35%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Brand yellow (dark mode) */
+    --brand-yellow: 45 97% 55%;
+    --brand-yellow-foreground: 0 0% 100%;
+
+    /* Brand orange (dark mode) */
+    --brand-orange: 30 96% 52%;
+    --brand-orange-foreground: 0 0% 100%;
+
+    /* Hero specific tokens (dark mode) */
+    --hero-button-bg: 2 60% 26%;
+    --hero-button-bg-hover: 2 65% 30%;
+    --hero-button-fg: 182 100% 40%;
+    --hero-headline: 356 78% 56%;
+    /* Help tooltip tokens */
+    --help-bg: 0 0% 100%;
+    --help-fg: 0 0% 0%;
+    
+    /* Marketing page text colors for dark mode */
+    --marketing-text-dark: 0 0% 20%;
+    --marketing-cta-bg: 30 80% 35%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .text-outline-black {
+    color: hsl(var(--foreground));
+    -webkit-text-stroke: 2px hsl(var(--headline-stroke));
+    paint-order: stroke fill;
+    text-shadow:
+      1px 1px 0 hsl(var(--headline-stroke)),
+      -1px 1px 0 hsl(var(--headline-stroke)),
+      1px -1px 0 hsl(var(--headline-stroke)),
+      -1px -1px 0 hsl(var(--headline-stroke));
+  }
+
+  .btn-brand-yellow {
+    background-color: hsl(var(--brand-yellow));
+    color: hsl(var(--brand-yellow-foreground));
+    border-color: transparent;
+  }
+  .btn-brand-yellow:hover {
+    filter: brightness(0.95);
+  }
+}

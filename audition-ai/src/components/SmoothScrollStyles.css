@@ -1,0 +1,41 @@
+
+/* Custom scrollbar styles for smooth teleprompter */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.smooth-scroll-container {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.smooth-scroll-container::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+/* Enhanced transitions for dialogue lines */
+.dialogue-line {
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, opacity, color;
+}
+
+.dialogue-line.current {
+  transform: translateY(0) scale(1.05);
+  filter: brightness(1.2);
+}
+
+.dialogue-line.past {
+  transform: translateY(0) scale(0.95);
+  filter: brightness(0.6);
+}
+
+.dialogue-line.upcoming {
+  transform: translateY(0) scale(1);
+  filter: brightness(0.8);
+}

@@ -1,0 +1,26 @@
+
+project_id = "cqlczzkyktktaajbfmli"
+
+[functions.text-to-speech]
+verify_jwt = false
+
+[functions.tts-cache]
+verify_jwt = false
+
+[functions.purge-tts-cache]
+verify_jwt = false
+
+[functions.realtime-voice-partner]
+verify_jwt = false
+
+[functions.coaching-voice-chat]
+verify_jwt = false
+
+[functions.send-audition-reminders]
+verify_jwt = false
+
+[functions.summarize-scene]
+verify_jwt = false
+
+[functions.coqui-tts]
+verify_jwt = false
